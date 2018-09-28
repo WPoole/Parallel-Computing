@@ -48,7 +48,7 @@ public class DiningPhilosophers {
 			this.rand = new Random();
 			
 			// For the "last" philosopher in the group, swap the positions of their chop sticks so that they
-			// pick up their right chop stick first instead of their left. This solve the deadlock problem.
+			// pick up their right chop stick first instead of their left. This solves the deadlock problem.
 			if(philosopherId == chopsticks.length - 1) {
 				this.leftChopstickIndex = (philosopherId + 1) % chopsticks.length;
 				this.rightChopstickIndex =  philosopherId;
