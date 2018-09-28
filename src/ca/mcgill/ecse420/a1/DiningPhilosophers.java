@@ -15,7 +15,8 @@ public class DiningPhilosophers {
 		
 		// Instantiate locks to represent the chop sticks.
 		for(int i = 0; i < chopsticks.length; i++) {
-			// Set to true so that a fair ordering policy is implemented on the locks.
+			// Set to true so that a fair ordering policy is implemented on the locks. This
+			// helps avoid starvation.
 			chopsticks[i] = new ReentrantLock(true);
 		}
 		
